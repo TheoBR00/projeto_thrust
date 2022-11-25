@@ -50,6 +50,8 @@ struct swap_vec
 
     float dist = 10000000;
 
+    float d;
+
     //return swap(static_cast<graph>(vetor[posi]), static_cast<graph>(vetor[posi+1]));
 
     for(int ct = 0; ct < posi; ct++){
@@ -60,7 +62,7 @@ struct swap_vec
         vetor[ct_2] = p2;
         vetor[ct_2+1] = p1;
 
-        float d = sqrt(pow(vetor[ct_2].x - vetor[ct_2+1].x, 2) + pow(vetor[ct_2].y - vetor[ct_2+1].y, 2));
+        d = sqrt(pow(vetor[ct_2].x - vetor[ct_2+1].x, 2) + pow(vetor[ct_2].y - vetor[ct_2+1].y, 2));
 
         if(d < dist){
           dist = d;
@@ -298,7 +300,7 @@ int main(){
 
                 //swap(vec_pontos[count], vec_pontos[count+1]);
 
-                thrust::counting_iterator<int> iterador(0);
+                thrust::counting_iterator<float> iterador(0);
 
                 thrust::transform(iterador, iterador+(n-1), array_float.begin(), swap_vec(thrust::raw_pointer_cast(array.data())));
                 for(int it = 0; it < n; it++){
