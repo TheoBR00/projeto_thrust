@@ -55,10 +55,10 @@ struct swap_vec
     for(int ct = 0; ct < posi; ct++){
 
       for(int ct_2 = 0; ct_2 < n-1; ct_2++){
-        graph p1 = vetor[posi][ct_2];
-        graph p2 = vetor[posi][ct_2+1];
-        vetor[posi][ct_2] = p2;
-        vetor[posi][ct_2+1] = p1;
+        graph p1 = vetor[ct_2];
+        graph p2 = vetor[ct_2+1];
+        vetor[ct_2] = p2;
+        vetor[ct_2+1] = p1;
 
         float d = sqrt(pow(vetor[posi][ct_2].x - vetor[posi][ct_2+1].x, 2) + pow(vetor[posi][ct_2].y - vetor[posi][ct_2+1].y, 2));
 
