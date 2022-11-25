@@ -1,5 +1,3 @@
-%%writefile projeto_thrust.cu
-
 #include <iostream>
 #include <fstream>
 #include <vector>
