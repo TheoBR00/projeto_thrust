@@ -60,7 +60,7 @@ struct swap_vec
         vetor[ct_2] = p2;
         vetor[ct_2+1] = p1;
 
-        float d = sqrt(pow(vetor[posi][ct_2].x - vetor[posi][ct_2+1].x, 2) + pow(vetor[posi][ct_2].y - vetor[posi][ct_2+1].y, 2));
+        float d = sqrt(pow(vetor[ct_2].x - vetor[ct_2+1].x, 2) + pow(vetor[ct_2].y - vetor[ct_2+1].y, 2));
 
         if(d < dist){
           dist = d;
