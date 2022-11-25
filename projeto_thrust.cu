@@ -302,7 +302,7 @@ int main(){
 
                 thrust::counting_iterator<int> iterador(0);
 
-                thrust::transform(iterador, iterador+(n-1), array_float.begin(), swap_vec(thrust::raw_pointer_cast(array.data(), n)));
+                thrust::transform(iterador, iterador+(n-1), array_float.begin(), swap_vec(thrust::raw_pointer_cast(array.data()), n));
                 for(int it = 0; it < n; it++){
                   std::cout << "swap vec_pontos: " << static_cast<graph>(vec_pontos[it]).id << std::endl;
                 }
