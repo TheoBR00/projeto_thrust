@@ -238,7 +238,7 @@ int main(){
 
                     thrust::counting_iterator<int> iter(0);
 
-                    thrust::transform(iter, iter+(n-1), vec_pontos.begin(), dist_calc(thrust::raw_pointer_cast(vec_pontos.data())));
+                    //thrust::transform(iter, iter+(n-1), vec_pontos.begin(), dist_calc(thrust::raw_pointer_cast(vec_pontos.data())));
 
                     for(int tam = 0; tam < n; tam++){
                       std::cout << "vec_dists = " << vec_dists[tam] << std::endl;
