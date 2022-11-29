@@ -302,7 +302,11 @@ int main(){
 
                 thrust::counting_iterator<int> iterador(0);
 
-                thrust::transform(iterador, iterador+(n-1), array_float.begin(), swap_vec(thrust::raw_pointer_cast(array.data()), n));
+                auto ar = array_float.begin();
+
+                auto swa = swap_vec(thrust::raw_pointer_cast(array.data()), n);
+
+                thrust::transform(iterador, iterador+(n-1), ar, swa);
                 
             }
             
